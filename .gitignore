@@ -1,27 +1,16 @@
-# Ficheiros sensiveis (chave da API)
 .env
-
-# Ambiente virtual
 .venv/
-venv/
 __pycache__/
 *.pyc
-*.pyo
-
-# Outputs gerados em runtime
+.DS_Store
 cache/
 vectorstore/
 data/inspections/INS_*.json
 data/rules/RULE_*.json
-
-# Sistema
-.DS_Store
-.idea/
-.vscode/
-*.log
-
-# Pool de imagens base (grande, pessoal)
-# Mantem subpastas categorizadas (normal, empty, etc.) que sao geradas
-
-# Relatorios de avaliacao
 evaluation_report.json
+data/images/_pool/
+data/images/normal/
+data/images/empty/
+data/images/planogram/
+data/images/messy/
+data/images/ambiguous/
