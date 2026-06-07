@@ -1,0 +1,19 @@
+Analisa esta imagem de uma prateleira de supermercado seguindo estes passos:
+
+Passo 1: Descreve em prosa o que ves na imagem (numero aproximado de prateleiras, tipos de produtos, ocupacao visual).
+Passo 2: Examina cada zona da imagem (topo, meio, base) e identifica anomalias se existirem.
+Passo 3: Classifica cada anomalia identificada em termos de tipo, severidade, e localizacao.
+Passo 4: Estima a taxa de preenchimento global (shelf_fill_rate) entre 0.0 e 1.0.
+Passo 5: Produz o JSON final.
+
+Coloca o raciocinio dos passos 1-4 no campo model_reasoning. O JSON final tem este schema:
+
+{
+  "overall_status": "ok|warning|critical",
+  "issues": [{"issue_id":"ISS_001","type":"...","location":"...","severity":"...","description":"...","confidence":0.0,"affected_area_pct":0.0}],
+  "shelf_fill_rate": 0.0,
+  "products_detected": [],
+  "model_reasoning": "passo 1: ... passo 2: ... passo 3: ... passo 4: ..."
+}
+
+Responde APENAS com JSON valido.

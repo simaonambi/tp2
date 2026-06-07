@@ -1,0 +1,756 @@
+# Origens das imagens do dataset TP2
+# Formato: ficheiro<TAB>origem<TAB>categoria
+# Imagens base: fotos proprias recolhidas em supermercados locais.
+# Variantes sinteticas geradas em pipeline local (build_dataset.py).
+# Licenca: imagens proprias - uso academico (TP2 LIACD).
+
+normal_0000.jpg	origem: foto propria (IMG_6566.heic)	categoria: normal
+normal_0001.jpg	origem: foto propria (IMG_6567.heic)	categoria: normal
+normal_0002.jpg	origem: foto propria (IMG_6568.heic)	categoria: normal
+normal_0003.jpg	origem: foto propria (IMG_6569.heic)	categoria: normal
+normal_0004.jpg	origem: foto propria (IMG_6570.heic)	categoria: normal
+normal_0005.jpg	origem: foto propria (IMG_6571.heic)	categoria: normal
+normal_0006.jpg	origem: foto propria (IMG_6572.heic)	categoria: normal
+normal_0007.jpg	origem: foto propria (IMG_6573.heic)	categoria: normal
+normal_0008.jpg	origem: foto propria (IMG_6574.heic)	categoria: normal
+normal_0009.jpg	origem: foto propria (IMG_6575.heic)	categoria: normal
+normal_0010.jpg	origem: foto propria (IMG_6576.heic)	categoria: normal
+normal_0011.jpg	origem: foto propria (IMG_6577.heic)	categoria: normal
+normal_0012.jpg	origem: foto propria (IMG_6578.heic)	categoria: normal
+normal_0013.jpg	origem: foto propria (IMG_6579.heic)	categoria: normal
+normal_0014.jpg	origem: foto propria (IMG_6580.heic)	categoria: normal
+normal_0015.jpg	origem: foto propria (IMG_6581.heic)	categoria: normal
+normal_0016.jpg	origem: foto propria (IMG_6582.heic)	categoria: normal
+normal_0017.jpg	origem: foto propria (IMG_6583.heic)	categoria: normal
+normal_0018.jpg	origem: foto propria (IMG_6584.heic)	categoria: normal
+normal_0019.jpg	origem: foto propria (IMG_6585.heic)	categoria: normal
+normal_0020.jpg	origem: foto propria (IMG_6586.heic)	categoria: normal
+normal_0021.jpg	origem: foto propria (IMG_6587.heic)	categoria: normal
+normal_0022.jpg	origem: foto propria (IMG_6588.heic)	categoria: normal
+normal_0023.jpg	origem: foto propria (IMG_6589.heic)	categoria: normal
+normal_0024.jpg	origem: foto propria (IMG_6590.heic)	categoria: normal
+normal_0025.jpg	origem: foto propria (IMG_6591.heic)	categoria: normal
+normal_0026.jpg	origem: foto propria (IMG_6593.heic)	categoria: normal
+normal_0027.jpg	origem: foto propria (IMG_6595.heic)	categoria: normal
+normal_0028.jpg	origem: foto propria (IMG_6596.heic)	categoria: normal
+normal_0029.jpg	origem: foto propria (IMG_6597.heic)	categoria: normal
+normal_0030.jpg	origem: foto propria (IMG_6598.heic)	categoria: normal
+normal_0031.jpg	origem: foto propria (IMG_6599.heic)	categoria: normal
+normal_0032.jpg	origem: foto propria (IMG_6600.heic)	categoria: normal
+normal_var_0000.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0001.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0002.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0003.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0004.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0005.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0006.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0007.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0008.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0009.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0010.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0011.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0012.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0013.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0014.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0015.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0016.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0017.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0018.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0019.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0020.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0021.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0022.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0023.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0024.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0025.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0026.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+normal_var_0027.jpg	origem: variacao de IMG_6595.heic	categoria: normal
+normal_var_0028.jpg	origem: variacao de IMG_6596.heic	categoria: normal
+normal_var_0029.jpg	origem: variacao de IMG_6597.heic	categoria: normal
+normal_var_0030.jpg	origem: variacao de IMG_6598.heic	categoria: normal
+normal_var_0031.jpg	origem: variacao de IMG_6599.heic	categoria: normal
+normal_var_0032.jpg	origem: variacao de IMG_6600.heic	categoria: normal
+normal_var_0033.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0034.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0035.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0036.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0037.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0038.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0039.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0040.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0041.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0042.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0043.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0044.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0045.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0046.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0047.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0048.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0049.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0050.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0051.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0052.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0053.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0054.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0055.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0056.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0057.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0058.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0059.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+normal_var_0060.jpg	origem: variacao de IMG_6595.heic	categoria: normal
+normal_var_0061.jpg	origem: variacao de IMG_6596.heic	categoria: normal
+normal_var_0062.jpg	origem: variacao de IMG_6597.heic	categoria: normal
+normal_var_0063.jpg	origem: variacao de IMG_6598.heic	categoria: normal
+normal_var_0064.jpg	origem: variacao de IMG_6599.heic	categoria: normal
+normal_var_0065.jpg	origem: variacao de IMG_6600.heic	categoria: normal
+normal_var_0066.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0067.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0068.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0069.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0070.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0071.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0072.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0073.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0074.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0075.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0076.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0077.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0078.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0079.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0080.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0081.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0082.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0083.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0084.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0085.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0086.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0087.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0088.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0089.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0090.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0091.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0092.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+normal_var_0093.jpg	origem: variacao de IMG_6595.heic	categoria: normal
+normal_var_0094.jpg	origem: variacao de IMG_6596.heic	categoria: normal
+normal_var_0095.jpg	origem: variacao de IMG_6597.heic	categoria: normal
+normal_var_0096.jpg	origem: variacao de IMG_6598.heic	categoria: normal
+normal_var_0097.jpg	origem: variacao de IMG_6599.heic	categoria: normal
+normal_var_0098.jpg	origem: variacao de IMG_6600.heic	categoria: normal
+normal_var_0099.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0100.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0101.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0102.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0103.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0104.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0105.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0106.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0107.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0108.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0109.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0110.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0111.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0112.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0113.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0114.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0115.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0116.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0117.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0118.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0119.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0120.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0121.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0122.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0123.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0124.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0125.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+normal_var_0126.jpg	origem: variacao de IMG_6595.heic	categoria: normal
+normal_var_0127.jpg	origem: variacao de IMG_6596.heic	categoria: normal
+normal_var_0128.jpg	origem: variacao de IMG_6597.heic	categoria: normal
+normal_var_0129.jpg	origem: variacao de IMG_6598.heic	categoria: normal
+normal_var_0130.jpg	origem: variacao de IMG_6599.heic	categoria: normal
+normal_var_0131.jpg	origem: variacao de IMG_6600.heic	categoria: normal
+normal_var_0132.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0133.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0134.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0135.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0136.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0137.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0138.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0139.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0140.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0141.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0142.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0143.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0144.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0145.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0146.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0147.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0148.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0149.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0150.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0151.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0152.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0153.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0154.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0155.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0156.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0157.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0158.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+normal_var_0159.jpg	origem: variacao de IMG_6595.heic	categoria: normal
+normal_var_0160.jpg	origem: variacao de IMG_6596.heic	categoria: normal
+normal_var_0161.jpg	origem: variacao de IMG_6597.heic	categoria: normal
+normal_var_0162.jpg	origem: variacao de IMG_6598.heic	categoria: normal
+normal_var_0163.jpg	origem: variacao de IMG_6599.heic	categoria: normal
+normal_var_0164.jpg	origem: variacao de IMG_6600.heic	categoria: normal
+normal_var_0165.jpg	origem: variacao de IMG_6566.heic	categoria: normal
+normal_var_0166.jpg	origem: variacao de IMG_6567.heic	categoria: normal
+normal_var_0167.jpg	origem: variacao de IMG_6568.heic	categoria: normal
+normal_var_0168.jpg	origem: variacao de IMG_6569.heic	categoria: normal
+normal_var_0169.jpg	origem: variacao de IMG_6570.heic	categoria: normal
+normal_var_0170.jpg	origem: variacao de IMG_6571.heic	categoria: normal
+normal_var_0171.jpg	origem: variacao de IMG_6572.heic	categoria: normal
+normal_var_0172.jpg	origem: variacao de IMG_6573.heic	categoria: normal
+normal_var_0173.jpg	origem: variacao de IMG_6574.heic	categoria: normal
+normal_var_0174.jpg	origem: variacao de IMG_6575.heic	categoria: normal
+normal_var_0175.jpg	origem: variacao de IMG_6576.heic	categoria: normal
+normal_var_0176.jpg	origem: variacao de IMG_6577.heic	categoria: normal
+normal_var_0177.jpg	origem: variacao de IMG_6578.heic	categoria: normal
+normal_var_0178.jpg	origem: variacao de IMG_6579.heic	categoria: normal
+normal_var_0179.jpg	origem: variacao de IMG_6580.heic	categoria: normal
+normal_var_0180.jpg	origem: variacao de IMG_6581.heic	categoria: normal
+normal_var_0181.jpg	origem: variacao de IMG_6582.heic	categoria: normal
+normal_var_0182.jpg	origem: variacao de IMG_6583.heic	categoria: normal
+normal_var_0183.jpg	origem: variacao de IMG_6584.heic	categoria: normal
+normal_var_0184.jpg	origem: variacao de IMG_6585.heic	categoria: normal
+normal_var_0185.jpg	origem: variacao de IMG_6586.heic	categoria: normal
+normal_var_0186.jpg	origem: variacao de IMG_6587.heic	categoria: normal
+normal_var_0187.jpg	origem: variacao de IMG_6588.heic	categoria: normal
+normal_var_0188.jpg	origem: variacao de IMG_6589.heic	categoria: normal
+normal_var_0189.jpg	origem: variacao de IMG_6590.heic	categoria: normal
+normal_var_0190.jpg	origem: variacao de IMG_6591.heic	categoria: normal
+normal_var_0191.jpg	origem: variacao de IMG_6593.heic	categoria: normal
+empty_synth_0000.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: empty
+empty_synth_0001.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: empty
+empty_synth_0002.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: empty
+empty_synth_0003.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: empty
+empty_synth_0004.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: empty
+empty_synth_0005.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: empty
+empty_synth_0006.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: empty
+empty_synth_0007.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: empty
+empty_synth_0008.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: empty
+empty_synth_0009.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: empty
+empty_synth_0010.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: empty
+empty_synth_0011.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: empty
+empty_synth_0012.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: empty
+empty_synth_0013.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: empty
+empty_synth_0014.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: empty
+empty_synth_0015.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: empty
+empty_synth_0016.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: empty
+empty_synth_0017.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: empty
+empty_synth_0018.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: empty
+empty_synth_0019.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: empty
+empty_synth_0020.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: empty
+empty_synth_0021.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: empty
+empty_synth_0022.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: empty
+empty_synth_0023.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: empty
+empty_synth_0024.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: empty
+empty_synth_0025.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: empty
+empty_synth_0026.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: empty
+empty_synth_0027.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: empty
+empty_synth_0028.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: empty
+empty_synth_0029.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: empty
+empty_synth_0030.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: empty
+empty_synth_0031.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: empty
+empty_synth_0032.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: empty
+empty_synth_0033.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: empty
+empty_synth_0034.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: empty
+empty_synth_0035.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: empty
+empty_synth_0036.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: empty
+empty_synth_0037.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: empty
+empty_synth_0038.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: empty
+empty_synth_0039.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: empty
+empty_synth_0040.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: empty
+empty_synth_0041.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: empty
+empty_synth_0042.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: empty
+empty_synth_0043.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: empty
+empty_synth_0044.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: empty
+empty_synth_0045.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: empty
+empty_synth_0046.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: empty
+empty_synth_0047.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: empty
+empty_synth_0048.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: empty
+empty_synth_0049.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: empty
+empty_synth_0050.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: empty
+empty_synth_0051.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: empty
+empty_synth_0052.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: empty
+empty_synth_0053.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: empty
+empty_synth_0054.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: empty
+empty_synth_0055.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: empty
+empty_synth_0056.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: empty
+empty_synth_0057.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: empty
+empty_synth_0058.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: empty
+empty_synth_0059.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: empty
+empty_synth_0060.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: empty
+empty_synth_0061.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: empty
+empty_synth_0062.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: empty
+empty_synth_0063.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: empty
+empty_synth_0064.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: empty
+empty_synth_0065.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: empty
+empty_synth_0066.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: empty
+empty_synth_0067.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: empty
+empty_synth_0068.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: empty
+empty_synth_0069.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: empty
+empty_synth_0070.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: empty
+empty_synth_0071.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: empty
+empty_synth_0072.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: empty
+empty_synth_0073.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: empty
+empty_synth_0074.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: empty
+empty_synth_0075.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: empty
+empty_synth_0076.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: empty
+empty_synth_0077.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: empty
+empty_synth_0078.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: empty
+empty_synth_0079.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: empty
+empty_synth_0080.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: empty
+empty_synth_0081.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: empty
+empty_synth_0082.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: empty
+empty_synth_0083.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: empty
+empty_synth_0084.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: empty
+empty_synth_0085.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: empty
+empty_synth_0086.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: empty
+empty_synth_0087.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: empty
+empty_synth_0088.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: empty
+empty_synth_0089.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: empty
+empty_synth_0090.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: empty
+empty_synth_0091.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: empty
+empty_synth_0092.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: empty
+empty_synth_0093.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: empty
+empty_synth_0094.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: empty
+empty_synth_0095.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: empty
+empty_synth_0096.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: empty
+empty_synth_0097.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: empty
+empty_synth_0098.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: empty
+empty_synth_0099.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: empty
+empty_synth_0100.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: empty
+empty_synth_0101.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: empty
+empty_synth_0102.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: empty
+empty_synth_0103.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: empty
+empty_synth_0104.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: empty
+empty_synth_0105.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: empty
+empty_synth_0106.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: empty
+empty_synth_0107.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: empty
+empty_synth_0108.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: empty
+empty_synth_0109.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: empty
+empty_synth_0110.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: empty
+empty_synth_0111.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: empty
+empty_synth_0112.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: empty
+empty_synth_0113.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: empty
+empty_synth_0114.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: empty
+empty_synth_0115.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: empty
+empty_synth_0116.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: empty
+empty_synth_0117.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: empty
+empty_synth_0118.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: empty
+empty_synth_0119.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: empty
+empty_synth_0120.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: empty
+empty_synth_0121.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: empty
+empty_synth_0122.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: empty
+empty_synth_0123.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: empty
+empty_synth_0124.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: empty
+empty_synth_0125.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: empty
+empty_synth_0126.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: empty
+empty_synth_0127.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: empty
+empty_synth_0128.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: empty
+empty_synth_0129.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: empty
+empty_synth_0130.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: empty
+empty_synth_0131.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: empty
+empty_synth_0132.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: empty
+empty_synth_0133.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: empty
+empty_synth_0134.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: empty
+empty_synth_0135.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: empty
+empty_synth_0136.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: empty
+empty_synth_0137.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: empty
+empty_synth_0138.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: empty
+empty_synth_0139.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: empty
+empty_synth_0140.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: empty
+empty_synth_0141.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: empty
+empty_synth_0142.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: empty
+empty_synth_0143.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: empty
+empty_synth_0144.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: empty
+empty_synth_0145.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: empty
+empty_synth_0146.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: empty
+empty_synth_0147.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: empty
+empty_synth_0148.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: empty
+empty_synth_0149.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: empty
+planogram_synth_0000.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: planogram
+planogram_synth_0001.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: planogram
+planogram_synth_0002.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: planogram
+planogram_synth_0003.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: planogram
+planogram_synth_0004.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: planogram
+planogram_synth_0005.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: planogram
+planogram_synth_0006.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: planogram
+planogram_synth_0007.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: planogram
+planogram_synth_0008.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: planogram
+planogram_synth_0009.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: planogram
+planogram_synth_0010.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: planogram
+planogram_synth_0011.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: planogram
+planogram_synth_0012.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: planogram
+planogram_synth_0013.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: planogram
+planogram_synth_0014.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: planogram
+planogram_synth_0015.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: planogram
+planogram_synth_0016.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: planogram
+planogram_synth_0017.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: planogram
+planogram_synth_0018.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: planogram
+planogram_synth_0019.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: planogram
+planogram_synth_0020.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: planogram
+planogram_synth_0021.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: planogram
+planogram_synth_0022.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: planogram
+planogram_synth_0023.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: planogram
+planogram_synth_0024.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: planogram
+planogram_synth_0025.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: planogram
+planogram_synth_0026.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: planogram
+planogram_synth_0027.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: planogram
+planogram_synth_0028.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: planogram
+planogram_synth_0029.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: planogram
+planogram_synth_0030.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: planogram
+planogram_synth_0031.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: planogram
+planogram_synth_0032.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: planogram
+planogram_synth_0033.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: planogram
+planogram_synth_0034.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: planogram
+planogram_synth_0035.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: planogram
+planogram_synth_0036.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: planogram
+planogram_synth_0037.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: planogram
+planogram_synth_0038.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: planogram
+planogram_synth_0039.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: planogram
+planogram_synth_0040.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: planogram
+planogram_synth_0041.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: planogram
+planogram_synth_0042.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: planogram
+planogram_synth_0043.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: planogram
+planogram_synth_0044.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: planogram
+planogram_synth_0045.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: planogram
+planogram_synth_0046.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: planogram
+planogram_synth_0047.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: planogram
+planogram_synth_0048.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: planogram
+planogram_synth_0049.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: planogram
+planogram_synth_0050.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: planogram
+planogram_synth_0051.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: planogram
+planogram_synth_0052.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: planogram
+planogram_synth_0053.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: planogram
+planogram_synth_0054.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: planogram
+planogram_synth_0055.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: planogram
+planogram_synth_0056.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: planogram
+planogram_synth_0057.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: planogram
+planogram_synth_0058.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: planogram
+planogram_synth_0059.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: planogram
+planogram_synth_0060.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: planogram
+planogram_synth_0061.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: planogram
+planogram_synth_0062.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: planogram
+planogram_synth_0063.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: planogram
+planogram_synth_0064.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: planogram
+planogram_synth_0065.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: planogram
+planogram_synth_0066.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: planogram
+planogram_synth_0067.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: planogram
+planogram_synth_0068.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: planogram
+planogram_synth_0069.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: planogram
+planogram_synth_0070.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: planogram
+planogram_synth_0071.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: planogram
+planogram_synth_0072.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: planogram
+planogram_synth_0073.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: planogram
+planogram_synth_0074.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: planogram
+planogram_synth_0075.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: planogram
+planogram_synth_0076.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: planogram
+planogram_synth_0077.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: planogram
+planogram_synth_0078.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: planogram
+planogram_synth_0079.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: planogram
+planogram_synth_0080.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: planogram
+planogram_synth_0081.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: planogram
+planogram_synth_0082.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: planogram
+planogram_synth_0083.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: planogram
+planogram_synth_0084.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: planogram
+planogram_synth_0085.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: planogram
+planogram_synth_0086.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: planogram
+planogram_synth_0087.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: planogram
+planogram_synth_0088.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: planogram
+planogram_synth_0089.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: planogram
+planogram_synth_0090.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: planogram
+planogram_synth_0091.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: planogram
+planogram_synth_0092.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: planogram
+planogram_synth_0093.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: planogram
+planogram_synth_0094.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: planogram
+planogram_synth_0095.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: planogram
+planogram_synth_0096.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: planogram
+planogram_synth_0097.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: planogram
+planogram_synth_0098.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: planogram
+planogram_synth_0099.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: planogram
+planogram_synth_0100.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: planogram
+planogram_synth_0101.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: planogram
+planogram_synth_0102.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: planogram
+planogram_synth_0103.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: planogram
+planogram_synth_0104.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: planogram
+planogram_synth_0105.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: planogram
+planogram_synth_0106.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: planogram
+planogram_synth_0107.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: planogram
+planogram_synth_0108.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: planogram
+planogram_synth_0109.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: planogram
+planogram_synth_0110.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: planogram
+planogram_synth_0111.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: planogram
+planogram_synth_0112.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: planogram
+planogram_synth_0113.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: planogram
+planogram_synth_0114.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: planogram
+planogram_synth_0115.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: planogram
+planogram_synth_0116.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: planogram
+planogram_synth_0117.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: planogram
+planogram_synth_0118.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: planogram
+planogram_synth_0119.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: planogram
+planogram_synth_0120.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: planogram
+planogram_synth_0121.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: planogram
+planogram_synth_0122.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: planogram
+planogram_synth_0123.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: planogram
+planogram_synth_0124.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: planogram
+planogram_synth_0125.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: planogram
+planogram_synth_0126.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: planogram
+planogram_synth_0127.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: planogram
+planogram_synth_0128.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: planogram
+planogram_synth_0129.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: planogram
+planogram_synth_0130.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: planogram
+planogram_synth_0131.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: planogram
+planogram_synth_0132.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: planogram
+planogram_synth_0133.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: planogram
+planogram_synth_0134.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: planogram
+planogram_synth_0135.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: planogram
+planogram_synth_0136.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: planogram
+planogram_synth_0137.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: planogram
+planogram_synth_0138.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: planogram
+planogram_synth_0139.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: planogram
+planogram_synth_0140.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: planogram
+planogram_synth_0141.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: planogram
+planogram_synth_0142.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: planogram
+planogram_synth_0143.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: planogram
+planogram_synth_0144.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: planogram
+planogram_synth_0145.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: planogram
+planogram_synth_0146.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: planogram
+planogram_synth_0147.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: planogram
+planogram_synth_0148.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: planogram
+planogram_synth_0149.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: planogram
+messy_synth_0000.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: messy
+messy_synth_0001.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: messy
+messy_synth_0002.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: messy
+messy_synth_0003.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: messy
+messy_synth_0004.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: messy
+messy_synth_0005.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: messy
+messy_synth_0006.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: messy
+messy_synth_0007.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: messy
+messy_synth_0008.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: messy
+messy_synth_0009.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: messy
+messy_synth_0010.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: messy
+messy_synth_0011.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: messy
+messy_synth_0012.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: messy
+messy_synth_0013.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: messy
+messy_synth_0014.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: messy
+messy_synth_0015.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: messy
+messy_synth_0016.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: messy
+messy_synth_0017.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: messy
+messy_synth_0018.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: messy
+messy_synth_0019.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: messy
+messy_synth_0020.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: messy
+messy_synth_0021.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: messy
+messy_synth_0022.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: messy
+messy_synth_0023.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: messy
+messy_synth_0024.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: messy
+messy_synth_0025.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: messy
+messy_synth_0026.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: messy
+messy_synth_0027.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: messy
+messy_synth_0028.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: messy
+messy_synth_0029.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: messy
+messy_synth_0030.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: messy
+messy_synth_0031.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: messy
+messy_synth_0032.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: messy
+messy_synth_0033.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: messy
+messy_synth_0034.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: messy
+messy_synth_0035.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: messy
+messy_synth_0036.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: messy
+messy_synth_0037.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: messy
+messy_synth_0038.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: messy
+messy_synth_0039.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: messy
+messy_synth_0040.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: messy
+messy_synth_0041.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: messy
+messy_synth_0042.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: messy
+messy_synth_0043.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: messy
+messy_synth_0044.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: messy
+messy_synth_0045.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: messy
+messy_synth_0046.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: messy
+messy_synth_0047.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: messy
+messy_synth_0048.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: messy
+messy_synth_0049.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: messy
+messy_synth_0050.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: messy
+messy_synth_0051.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: messy
+messy_synth_0052.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: messy
+messy_synth_0053.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: messy
+messy_synth_0054.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: messy
+messy_synth_0055.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: messy
+messy_synth_0056.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: messy
+messy_synth_0057.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: messy
+messy_synth_0058.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: messy
+messy_synth_0059.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: messy
+messy_synth_0060.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: messy
+messy_synth_0061.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: messy
+messy_synth_0062.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: messy
+messy_synth_0063.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: messy
+messy_synth_0064.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: messy
+messy_synth_0065.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: messy
+messy_synth_0066.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: messy
+messy_synth_0067.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: messy
+messy_synth_0068.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: messy
+messy_synth_0069.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: messy
+messy_synth_0070.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: messy
+messy_synth_0071.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: messy
+messy_synth_0072.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: messy
+messy_synth_0073.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: messy
+messy_synth_0074.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: messy
+messy_synth_0075.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: messy
+messy_synth_0076.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: messy
+messy_synth_0077.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: messy
+messy_synth_0078.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: messy
+messy_synth_0079.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: messy
+messy_synth_0080.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: messy
+messy_synth_0081.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: messy
+messy_synth_0082.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: messy
+messy_synth_0083.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: messy
+messy_synth_0084.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: messy
+messy_synth_0085.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: messy
+messy_synth_0086.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: messy
+messy_synth_0087.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: messy
+messy_synth_0088.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: messy
+messy_synth_0089.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: messy
+messy_synth_0090.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: messy
+messy_synth_0091.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: messy
+messy_synth_0092.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: messy
+messy_synth_0093.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: messy
+messy_synth_0094.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: messy
+messy_synth_0095.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: messy
+messy_synth_0096.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: messy
+messy_synth_0097.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: messy
+messy_synth_0098.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: messy
+messy_synth_0099.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: messy
+messy_synth_0100.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: messy
+messy_synth_0101.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: messy
+messy_synth_0102.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: messy
+messy_synth_0103.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: messy
+messy_synth_0104.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: messy
+messy_synth_0105.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: messy
+messy_synth_0106.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: messy
+messy_synth_0107.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: messy
+messy_synth_0108.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: messy
+messy_synth_0109.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: messy
+messy_synth_0110.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: messy
+messy_synth_0111.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: messy
+messy_synth_0112.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: messy
+messy_synth_0113.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: messy
+messy_synth_0114.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: messy
+messy_synth_0115.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: messy
+messy_synth_0116.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: messy
+messy_synth_0117.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: messy
+messy_synth_0118.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: messy
+messy_synth_0119.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: messy
+ambiguous_synth_0000.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: ambiguous
+ambiguous_synth_0001.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: ambiguous
+ambiguous_synth_0002.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: ambiguous
+ambiguous_synth_0003.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: ambiguous
+ambiguous_synth_0004.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: ambiguous
+ambiguous_synth_0005.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: ambiguous
+ambiguous_synth_0006.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: ambiguous
+ambiguous_synth_0007.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: ambiguous
+ambiguous_synth_0008.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: ambiguous
+ambiguous_synth_0009.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: ambiguous
+ambiguous_synth_0010.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: ambiguous
+ambiguous_synth_0011.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: ambiguous
+ambiguous_synth_0012.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: ambiguous
+ambiguous_synth_0013.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: ambiguous
+ambiguous_synth_0014.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: ambiguous
+ambiguous_synth_0015.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: ambiguous
+ambiguous_synth_0016.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: ambiguous
+ambiguous_synth_0017.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: ambiguous
+ambiguous_synth_0018.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: ambiguous
+ambiguous_synth_0019.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: ambiguous
+ambiguous_synth_0020.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: ambiguous
+ambiguous_synth_0021.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: ambiguous
+ambiguous_synth_0022.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: ambiguous
+ambiguous_synth_0023.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: ambiguous
+ambiguous_synth_0024.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: ambiguous
+ambiguous_synth_0025.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: ambiguous
+ambiguous_synth_0026.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: ambiguous
+ambiguous_synth_0027.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: ambiguous
+ambiguous_synth_0028.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: ambiguous
+ambiguous_synth_0029.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: ambiguous
+ambiguous_synth_0030.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: ambiguous
+ambiguous_synth_0031.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: ambiguous
+ambiguous_synth_0032.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: ambiguous
+ambiguous_synth_0033.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: ambiguous
+ambiguous_synth_0034.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: ambiguous
+ambiguous_synth_0035.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: ambiguous
+ambiguous_synth_0036.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: ambiguous
+ambiguous_synth_0037.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: ambiguous
+ambiguous_synth_0038.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: ambiguous
+ambiguous_synth_0039.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: ambiguous
+ambiguous_synth_0040.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: ambiguous
+ambiguous_synth_0041.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: ambiguous
+ambiguous_synth_0042.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: ambiguous
+ambiguous_synth_0043.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: ambiguous
+ambiguous_synth_0044.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: ambiguous
+ambiguous_synth_0045.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: ambiguous
+ambiguous_synth_0046.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: ambiguous
+ambiguous_synth_0047.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: ambiguous
+ambiguous_synth_0048.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: ambiguous
+ambiguous_synth_0049.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: ambiguous
+ambiguous_synth_0050.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: ambiguous
+ambiguous_synth_0051.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: ambiguous
+ambiguous_synth_0052.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: ambiguous
+ambiguous_synth_0053.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: ambiguous
+ambiguous_synth_0054.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: ambiguous
+ambiguous_synth_0055.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: ambiguous
+ambiguous_synth_0056.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: ambiguous
+ambiguous_synth_0057.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: ambiguous
+ambiguous_synth_0058.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: ambiguous
+ambiguous_synth_0059.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: ambiguous
+ambiguous_synth_0060.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: ambiguous
+ambiguous_synth_0061.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: ambiguous
+ambiguous_synth_0062.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: ambiguous
+ambiguous_synth_0063.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: ambiguous
+ambiguous_synth_0064.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: ambiguous
+ambiguous_synth_0065.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: ambiguous
+ambiguous_synth_0066.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: ambiguous
+ambiguous_synth_0067.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: ambiguous
+ambiguous_synth_0068.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: ambiguous
+ambiguous_synth_0069.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: ambiguous
+ambiguous_synth_0070.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: ambiguous
+ambiguous_synth_0071.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: ambiguous
+ambiguous_synth_0072.jpg	origem: variante sintetica de IMG_6572.heic	transformacao: ambiguous
+ambiguous_synth_0073.jpg	origem: variante sintetica de IMG_6573.heic	transformacao: ambiguous
+ambiguous_synth_0074.jpg	origem: variante sintetica de IMG_6574.heic	transformacao: ambiguous
+ambiguous_synth_0075.jpg	origem: variante sintetica de IMG_6575.heic	transformacao: ambiguous
+ambiguous_synth_0076.jpg	origem: variante sintetica de IMG_6576.heic	transformacao: ambiguous
+ambiguous_synth_0077.jpg	origem: variante sintetica de IMG_6577.heic	transformacao: ambiguous
+ambiguous_synth_0078.jpg	origem: variante sintetica de IMG_6578.heic	transformacao: ambiguous
+ambiguous_synth_0079.jpg	origem: variante sintetica de IMG_6579.heic	transformacao: ambiguous
+ambiguous_synth_0080.jpg	origem: variante sintetica de IMG_6580.heic	transformacao: ambiguous
+ambiguous_synth_0081.jpg	origem: variante sintetica de IMG_6581.heic	transformacao: ambiguous
+ambiguous_synth_0082.jpg	origem: variante sintetica de IMG_6582.heic	transformacao: ambiguous
+ambiguous_synth_0083.jpg	origem: variante sintetica de IMG_6583.heic	transformacao: ambiguous
+ambiguous_synth_0084.jpg	origem: variante sintetica de IMG_6584.heic	transformacao: ambiguous
+ambiguous_synth_0085.jpg	origem: variante sintetica de IMG_6585.heic	transformacao: ambiguous
+ambiguous_synth_0086.jpg	origem: variante sintetica de IMG_6586.heic	transformacao: ambiguous
+ambiguous_synth_0087.jpg	origem: variante sintetica de IMG_6587.heic	transformacao: ambiguous
+ambiguous_synth_0088.jpg	origem: variante sintetica de IMG_6588.heic	transformacao: ambiguous
+ambiguous_synth_0089.jpg	origem: variante sintetica de IMG_6589.heic	transformacao: ambiguous
+ambiguous_synth_0090.jpg	origem: variante sintetica de IMG_6590.heic	transformacao: ambiguous
+ambiguous_synth_0091.jpg	origem: variante sintetica de IMG_6591.heic	transformacao: ambiguous
+ambiguous_synth_0092.jpg	origem: variante sintetica de IMG_6593.heic	transformacao: ambiguous
+ambiguous_synth_0093.jpg	origem: variante sintetica de IMG_6595.heic	transformacao: ambiguous
+ambiguous_synth_0094.jpg	origem: variante sintetica de IMG_6596.heic	transformacao: ambiguous
+ambiguous_synth_0095.jpg	origem: variante sintetica de IMG_6597.heic	transformacao: ambiguous
+ambiguous_synth_0096.jpg	origem: variante sintetica de IMG_6598.heic	transformacao: ambiguous
+ambiguous_synth_0097.jpg	origem: variante sintetica de IMG_6599.heic	transformacao: ambiguous
+ambiguous_synth_0098.jpg	origem: variante sintetica de IMG_6600.heic	transformacao: ambiguous
+ambiguous_synth_0099.jpg	origem: variante sintetica de IMG_6566.heic	transformacao: ambiguous
+ambiguous_synth_0100.jpg	origem: variante sintetica de IMG_6567.heic	transformacao: ambiguous
+ambiguous_synth_0101.jpg	origem: variante sintetica de IMG_6568.heic	transformacao: ambiguous
+ambiguous_synth_0102.jpg	origem: variante sintetica de IMG_6569.heic	transformacao: ambiguous
+ambiguous_synth_0103.jpg	origem: variante sintetica de IMG_6570.heic	transformacao: ambiguous
+ambiguous_synth_0104.jpg	origem: variante sintetica de IMG_6571.heic	transformacao: ambiguous

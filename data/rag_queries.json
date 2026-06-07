@@ -1,0 +1,42 @@
+[
+  {
+    "query": "Quais as zonas com problemas de qualidade dos produtos?",
+    "relevant_ids": ["INS_20260528T180735Z_8290aa93"],
+    "expected_topic": "product_quality"
+  },
+  {
+    "query": "Houve algum estado critico em alguma inspeccao?",
+    "relevant_ids": ["INS_20260605T213220Z_27d47d96"],
+    "expected_topic": "critical_status"
+  },
+  {
+    "query": "Que inspeccoes foram feitas na zona Z_S1?",
+    "relevant_ids": ["INS_20260528T180735Z_8290aa93"],
+    "expected_topic": "Z_S1"
+  },
+  {
+    "query": "Resume as inspeccoes feitas na zona N1",
+    "relevant_ids": ["INS_20260605T213202Z_76462b8e", "INS_20260605T213220Z_27d47d96"],
+    "expected_topic": "Z_N1"
+  },
+  {
+    "query": "Que inspeccoes tiveram multiplos problemas detectados?",
+    "relevant_ids": ["INS_20260605T213220Z_27d47d96"],
+    "expected_topic": "multiple_issues"
+  },
+  {
+    "query": "Houve problemas com pepinos ou produtos frescos?",
+    "relevant_ids": ["INS_20260528T180735Z_8290aa93"],
+    "expected_topic": "frescos"
+  },
+  {
+    "query": "Que zonas estao em estado critico?",
+    "relevant_ids": ["INS_20260605T213220Z_27d47d96"],
+    "expected_topic": "critical"
+  },
+  {
+    "query": "Resume os principais problemas detectados nesta semana.",
+    "relevant_ids": ["INS_20260528T180735Z_8290aa93", "INS_20260605T213220Z_27d47d96"],
+    "expected_topic": "weekly_summary"
+  }
+]

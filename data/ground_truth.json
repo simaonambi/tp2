@@ -1,0 +1,134 @@
+[
+  {
+    "image": "IMG_6566.heic",
+    "zone": "Z_S8",
+    "issues": []
+  },
+  {
+    "image": "IMG_6567.heic",
+    "zone": "Z_S8",
+    "issues": []
+  },
+  {
+    "image": "IMG_6568.heic",
+    "zone": "Z_S1",
+    "issues": []
+  },
+  {
+    "image": "IMG_6572.heic",
+    "zone": "Z_S5",
+    "issues": []
+  },
+  {
+    "image": "IMG_6576.heic",
+    "zone": "Z_S9",
+    "issues": []
+  },
+  {
+    "image": "IMG_6578.heic",
+    "zone": "Z_S4",
+    "issues": []
+  },
+  {
+    "image": "IMG_6581.heic",
+    "zone": "Z_S8",
+    "issues": []
+  },
+  {
+    "image": "IMG_6582.heic",
+    "zone": "Z_S8",
+    "issues": []
+  },
+  {
+    "image": "IMG_6583.heic",
+    "zone": "Z_S8",
+    "issues": []
+  },
+  {
+    "image": "IMG_6584.heic",
+    "zone": "Z_S1",
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "prateleira do meio, lado esquerdo, saquetas Continente"
+      }
+    ]
+  },
+  {
+    "image": "IMG_6586.heic",
+    "zone": "Z_S2",
+    "issues": [
+      {
+        "type": "empty_shelf",
+        "severity": "medium",
+        "location": "centro"
+      }
+    ]
+  },
+  {
+    "image": "IMG_6589.heic",
+    "zone": "Z_S2",
+    "issues": []
+  },
+  {
+    "image": "IMG_6593.heic",
+    "zone": "Z_S5",
+    "issues": []
+  },
+  {
+    "image": "81799354.webp",
+    "zone": "Z_N1",
+    "issues": [
+      {
+        "type": "misaligned",
+        "severity": "low",
+        "location": "pemultima plateleira"
+      }
+    ]
+  },
+  {
+    "image": "photo-1584294232067-c97f5d99eff3.jpeg",
+    "zone": "Z_N1",
+    "issues": [
+      {
+        "type": "label_missing",
+        "severity": "medium",
+        "location": "nao especificado"
+      }
+    ]
+  },
+  {
+    "image": "IMG_6621.heic",
+    "zone": "Z_S8",
+    "issues": [
+      {
+        "type": "wrong_product",
+        "severity": "medium",
+        "location": "nao especificado"
+      }
+    ]
+  },
+  {
+    "image": "IMG_6623.heic",
+    "zone": "Z_S8",
+    "issues": [
+      {
+        "type": "wrong_product",
+        "severity": "medium",
+        "location": "sabonete na seccao de oleos"
+      }
+    ]
+  },
+  {
+    "image": "IMG_6624.heic",
+    "zone": "Z_S5",
+    "issues": [
+      {
+        "type": "damaged",
+        "severity": "low",
+        "location": "garrafa de sumo amassada"
+      }
+    ]
+  }
+]
