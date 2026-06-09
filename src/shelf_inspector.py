@@ -17,6 +17,12 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 from PIL import Image
 
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except ImportError:
+    pass
+
 load_dotenv()
 
 API_KEY        = os.getenv("GEMINI_API_KEY")
