@@ -1,266 +1,463 @@
 """
-interface.py
-Interface conversacional em linha de comandos. Suporta inspeccao, gestao
-de regras, consulta historica e geracao de relatorios.
+interface_menu.py
+Interface interactiva com menu numerado para o sistema de inspeccao visual.
+Versao amigavel da interface: utilizador escolhe accoes por numero em vez
+de digitar comandos. Util para demonstracao e defesa oral.
 """
 
-import argparse
-import json
-import shlex
 import sys
 import traceback
 from datetime import datetime, timezone
 from pathlib import Path
 
+try:
+    import pillow_heif
+    pillow_heif.register_heif_opener()
+except ImportError:
+    pass
+
 from shelf_inspector  import inspect_image
 from rule_engine      import add_rule, list_rules, delete_rule, execute_rules
-from rag_memory       import index_inspection, search, answer_with_rag, index_all_from_disk
+from rag_memory       import (
+    index_inspection, search, answer_with_rag,
+    index_all_from_disk, compare_chunking_strategies
+)
 from report_generator import load_session_inspections, build_report
 
-WELCOME = """
-Sistema de Inspeccao Visual de Prateleiras (TP2 LIACD)
-Comandos disponiveis:
-  inspect <zone> --image <path> [--strategy chain_of_thought]
-  inspect-dir <dir> --zone <zone>
-  add rule "<texto da regra>"
-  list rules
-  delete rule <RULE_ID>
-  test rule <inspection.json>
-  history "<pergunta>"
-  search "<pergunta>"
-  compare <Z_A> <Z_B> [...] --period "last 7 days"
-  reindex
-  report [--session YYYY-MM-DD] [--zone Z_XX] [--period "last 7 days"]
-  help
-  exit
-"""
+
+# ============================================================
+# Helpers de UI
+# ============================================================
+
+def banner(text):
+    """Banner visual entre seccoes."""
+    print()
+    print("=" * 60)
+    print(f"  {text}")
+    print("=" * 60)
 
 
-def cmd_inspect(args):
-    """inspect <zone> --image <path> [--strategy ...]"""
-    p = argparse.ArgumentParser(prog="inspect", add_help=False)
-    p.add_argument("zone")
-    p.add_argument("--image",    required=True)
-    p.add_argument("--strategy", default="chain_of_thought",
-                    choices=["zero_shot", "chain_of_thought", "few_shot"])
-    p.add_argument("--no-cache", action="store_true")
-    ns = p.parse_args(args)
-
-    record = inspect_image(Path(ns.image), strategy=ns.strategy,
-                            zone_id=ns.zone, use_cache=not ns.no_cache)
-    index_inspection(record)
-    notifs = execute_rules(record)
-    fired  = [n for n in notifs if n.get("matched")]
-
-    print(f"Inspeccao {record['inspection_id']}")
-    print(f"  Zona:      {record['zone_id']}")
-    print(f"  Estado:    {record['overall_status']}")
-    print(f"  Fill rate: {record['shelf_fill_rate']}")
-    print(f"  Issues:    {len(record['issues'])}")
-    for iss in record["issues"]:
-        print(f"    - [{iss.get('severity','?')}] {iss.get('type','?')}: "
-               f"{iss.get('description','')[:80]}")
-    if fired:
-        print(f"  Regras disparadas: {len(fired)}")
-        for n in fired:
-            print(f"    {n.get('alert_level','?').upper()} [{n['rule_id']}]: "
-                   f"{n.get('message','')}")
+def pause():
+    """Pausa para o utilizador ler antes de voltar ao menu."""
+    input("\nCarrega Enter para continuar...")
 
 
-def cmd_inspect_dir(args):
-    """inspect-dir <dir> --zone <zone>"""
-    p = argparse.ArgumentParser(prog="inspect-dir", add_help=False)
-    p.add_argument("dir")
-    p.add_argument("--zone", default="Z_UNKNOWN")
-    p.add_argument("--strategy", default="chain_of_thought",
-                    choices=["zero_shot", "chain_of_thought", "few_shot"])
-    ns = p.parse_args(args)
+def ask(prompt, default=None):
+    """Pede input com valor por defeito."""
+    suffix = f" [{default}]" if default else ""
+    val = input(f"{prompt}{suffix}: ").strip()
+    return val if val else (default or "")
 
-    image_dir = Path(ns.dir)
-    images = sorted([f for f in image_dir.iterdir()
-                      if f.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}])
-    print(f"A inspeccionar {len(images)} imagens em {image_dir}...")
 
-    for img in images:
+def ask_choice(prompt, options, default_idx=None):
+    """Apresenta lista numerada e devolve escolha do utilizador.
+
+    options: lista de tuplos (valor_devolvido, texto_apresentado)
+    """
+    print(f"\n{prompt}")
+    for i, (_, label) in enumerate(options, 1):
+        marker = " (default)" if default_idx and i == default_idx else ""
+        print(f"  {i}. {label}{marker}")
+    while True:
+        raw = input("Escolha: ").strip()
+        if not raw and default_idx:
+            return options[default_idx - 1][0]
         try:
-            rec = inspect_image(img, strategy=ns.strategy, zone_id=ns.zone)
-            index_inspection(rec)
-            print(f"  {img.name}: {rec['overall_status']} (fill {rec['shelf_fill_rate']})")
-        except Exception as e:
-            print(f"  {img.name}: ERRO - {e}")
+            idx = int(raw)
+            if 1 <= idx <= len(options):
+                return options[idx - 1][0]
+        except ValueError:
+            pass
+        print(f"Numero invalido. Escolhe entre 1 e {len(options)}.")
 
 
-def cmd_add_rule(args):
-    """add rule "<texto>" """
-    if not args:
-        print("Uso: add rule \"<texto da regra>\"")
+def list_images_in(dir_path):
+    """Devolve lista ordenada de imagens validas em dir_path."""
+    extensions = {".jpg", ".jpeg", ".png", ".webp", ".heic"}
+    if not Path(dir_path).exists():
+        return []
+    return sorted([
+        f for f in Path(dir_path).iterdir()
+        if f.is_file() and f.suffix.lower() in extensions
+    ])
+
+
+# ============================================================
+# Accoes do menu
+# ============================================================
+
+def action_inspect():
+    """Inspecionar uma imagem."""
+    banner("INSPECIONAR UMA IMAGEM")
+
+    # Escolha do diretorio
+    default_dir = "data/images/_pool"
+    image_dir = ask("Pasta com imagens", default_dir)
+    images = list_images_in(image_dir)
+
+    if not images:
+        print(f"\nNenhuma imagem em {image_dir}.")
+        pause()
         return
-    text = " ".join(args)
-    rule = add_rule(text)
-    if "error" in rule:
-        print(f"Erro: {rule['error']}")
+
+    # Escolha da imagem
+    print(f"\nEncontradas {len(images)} imagens. Mostrando as primeiras 20:")
+    shown = images[:20]
+    for i, img in enumerate(shown, 1):
+        print(f"  {i:2d}. {img.name}")
+    if len(images) > 20:
+        print(f"  ... e mais {len(images) - 20}")
+
+    raw = input("\nNumero da imagem (ou nome completo): ").strip()
+    if not raw:
+        print("Nenhuma imagem escolhida. Cancelado.")
+        pause()
         return
-    print(f"Regra criada: {rule['rule_id']}")
-    print(f"  Descricao: {rule.get('description','')}")
-    ambig = rule.get("validation", {}).get("ambiguities", []) or []
-    if ambig:
-        print("  Ambiguidades detectadas:")
-        for a in ambig:
-            print(f"    - {a}")
-        print("  Pressupostos assumidos:")
-        for a in rule.get("validation", {}).get("assumptions", []) or []:
-            print(f"    - {a}")
+    if raw.isdigit():
+        idx = int(raw)
+        if not (1 <= idx <= len(shown)):
+            print(f"Numero invalido. Escolhe entre 1 e {len(shown)}.")
+            pause()
+            return
+        img_path = shown[idx - 1]
+    else:
+        img_path = Path(image_dir) / raw
+        if not img_path.exists() or not img_path.is_file():
+            print(f"Nao encontrei o ficheiro {img_path}.")
+            pause()
+            return
+
+    # Escolha da zona
+    zone = ask("Zona (ex: Z_S1, Z_S2, Z_N1)", "Z_S1")
+
+    # Escolha da estrategia
+    strategy = ask_choice(
+        "Estrategia de prompting:",
+        [
+            ("chain_of_thought", "Chain-of-Thought (recomendada)"),
+            ("zero_shot",        "Zero-shot (rapida)"),
+            ("few_shot",         "Few-shot (com exemplos)"),
+        ],
+        default_idx=1
+    )
+
+    print(f"\nA inspecionar {img_path.name} (zona={zone}, {strategy})...")
+    try:
+        record = inspect_image(img_path, strategy=strategy, zone_id=zone)
+        index_inspection(record)
+
+        print(f"\nInspeccao criada: {record['inspection_id']}")
+        print(f"  Estado:    {record['overall_status']}")
+        print(f"  Fill rate: {record['shelf_fill_rate']}")
+        print(f"  Issues:    {len(record['issues'])}")
+        for iss in record["issues"]:
+            print(f"    - [{iss.get('severity','?')}] {iss.get('type','?')}: "
+                   f"{iss.get('description','')[:80]}")
+
+        # Verificar regras
+        notifs = execute_rules(record)
+        fired  = [n for n in notifs if n.get("matched")]
+        if fired:
+            print(f"\n  Regras disparadas: {len(fired)}")
+            for n in fired:
+                print(f"    {n.get('alert_level','?').upper()} "
+                       f"[{n['rule_id']}]: {n.get('message','')}")
+    except Exception as e:
+        print(f"\nErro: {e}")
+    pause()
 
 
-def cmd_list_rules(_args):
+def action_add_rule():
+    """Adicionar uma nova regra."""
+    banner("ADICIONAR REGRA")
+    print("\nEscreve a regra em linguagem natural. Exemplos:")
+    print("  - Avisa quando uma prateleira estiver mais de 30% vazia")
+    print("  - Notifica em Z_S1 entre as 10h e 13h se houver produtos danificados")
+    print("  - Critico quando o fill rate cair abaixo de 50%")
+    text = input("\nRegra: ").strip()
+    if not text:
+        print("Texto vazio. Operacao cancelada.")
+        pause()
+        return
+
+    try:
+        rule = add_rule(text)
+        print(f"\nRegra guardada: {rule['rule_id']}")
+        print(f"  Descricao: {rule.get('description','')}")
+        amb = rule.get("validation", {}).get("ambiguities", [])
+        if amb:
+            print(f"\n  Ambiguidades detectadas ({len(amb)}):")
+            for a in amb:
+                print(f"    - {a}")
+        ass = rule.get("validation", {}).get("assumptions", [])
+        if ass:
+            print(f"  Assumpcoes feitas:")
+            for a in ass:
+                print(f"    - {a}")
+    except Exception as e:
+        print(f"\nErro: {e}")
+    pause()
+
+
+def action_list_rules():
+    """Listar todas as regras."""
+    banner("REGRAS DEFINIDAS")
     rules = list_rules()
     if not rules:
-        print("Nenhuma regra registada.")
+        print("\nNenhuma regra definida.")
+    else:
+        print(f"\nTotal: {len(rules)} regras\n")
+        for r in rules:
+            print(f"[{r['rule_id']}]")
+            print(f"  NL: {r.get('natural_language','')}")
+            print(f"  Desc: {r.get('description','')[:80]}")
+            cond = r.get("conditions", {})
+            issue_types = cond.get("issue_types", [])
+            if issue_types:
+                print(f"  Tipos: {', '.join(issue_types)}")
+            print()
+    pause()
+
+
+def action_delete_rule():
+    """Apagar uma regra."""
+    banner("APAGAR REGRA")
+    rules = list_rules()
+    if not rules:
+        print("\nNao ha regras para apagar.")
+        pause()
         return
-    print(f"{len(rules)} regra(s):")
-    for r in rules:
-        print(f"  [{r.get('rule_id')}] {r.get('description','')[:100]}")
 
+    print("\nRegras existentes:")
+    for i, r in enumerate(rules, 1):
+        print(f"  {i}. {r['rule_id']} - {r.get('natural_language','')[:60]}")
 
-def cmd_delete_rule(args):
-    if not args:
-        print("Uso: delete rule <RULE_ID>")
+    raw = input("\nNumero da regra a apagar (Enter ou 0 para cancelar): ").strip()
+    if not raw or raw == "0":
+        print("Cancelado.")
+        pause()
         return
-    rid = args[0]
-    print("Regra apagada." if delete_rule(rid) else "Regra nao encontrada.")
+    try:
+        idx = int(raw)
+        if not (1 <= idx <= len(rules)):
+            print("Numero invalido.")
+            pause()
+            return
+        rid = rules[idx - 1]["rule_id"]
+        delete_rule(rid)
+        print(f"Regra {rid} apagada.")
+    except ValueError:
+        print("Input invalido.")
+    pause()
 
 
-def cmd_test_rule(args):
-    if not args:
-        print("Uso: test rule <inspection.json>")
+def action_history():
+    """Pesquisar histórico via RAG (com LLM)."""
+    banner("PERGUNTAR AO HISTORICO (RAG)")
+    print("\nExemplos de perguntas:")
+    print("  - Que zonas tiveram problemas esta semana?")
+    print("  - Houve prateleiras vazias em Z_S1?")
+    print("  - Resume o estado da loja na ultima visita")
+    q = input("\nPergunta: ").strip()
+    if not q:
+        pause()
         return
-    path = Path(args[0])
-    if not path.exists():
-        print(f"Ficheiro nao encontrado: {path}")
+
+    print("\nA processar (pode demorar)...")
+    try:
+        res = answer_with_rag(q, k=3)
+        print(f"\nResposta:\n{res['answer']}\n")
+        print(f"Fontes consultadas ({len(res['sources'])}):")
+        for s in res["sources"]:
+            print(f"  - {s['inspection_id']} ({s['metadata'].get('zone_id','?')}, "
+                   f"{s['metadata'].get('date','?')})")
+    except Exception as e:
+        print(f"\nErro: {e}")
+    pause()
+
+
+def action_search():
+    """Pesquisa semântica directa (sem LLM)."""
+    banner("PESQUISA SEMANTICA (sem LLM)")
+    q = input("\nQuery: ").strip()
+    if not q:
+        pause()
         return
-    rec = json.loads(path.read_text(encoding="utf-8"))
-    notifs = execute_rules(rec)
-    for n in notifs:
-        tag = "DISPARO" if n["matched"] else "      -"
-        print(f"  {tag} {n['rule_id']}: {n['reasoning']}")
-        if n["matched"]:
-            print(f"           {n.get('alert_level','?').upper()}: {n.get('message','')}")
+    try:
+        results = search(q, k=5)
+        if not results:
+            print("\nNenhum resultado.")
+        else:
+            print(f"\n{len(results)} resultado(s):\n")
+            for r in results:
+                print(f"[{r['inspection_id']}] dist={r['distance']:.3f}")
+                print(f"  {r['summary'][:150]}")
+                print()
+    except Exception as e:
+        print(f"\nErro: {e}")
+    pause()
 
 
-def cmd_history(args):
-    if not args:
-        print("Uso: history \"<pergunta>\"")
+def action_compare_chunking():
+    """Comparar estratégias de chunking."""
+    banner("COMPARAR ESTRATEGIAS DE CHUNKING")
+
+    queries_path = ask("Ficheiro de queries", "data/rag_queries.json")
+    if not Path(queries_path).exists():
+        print(f"Ficheiro nao encontrado: {queries_path}")
+        pause()
         return
-    query = " ".join(args)
-    res = answer_with_rag(query, k=3)
-    print(f"\n{res['answer']}\n")
-    print(f"Fontes ({len(res['sources'])}):")
-    for s in res["sources"]:
-        print(f"  - {s['inspection_id']} ({s['metadata'].get('date','')})")
+
+    k = ask_choice(
+        "Valor de k:",
+        [(1, "k=1 (mais severo)"), (3, "k=3 (relaxado)")],
+        default_idx=1
+    )
+
+    import json
+    queries = json.loads(Path(queries_path).read_text(encoding="utf-8"))
+    print(f"\nA comparar sobre {len(queries)} queries (pode demorar ~10s)...")
+    try:
+        results = compare_chunking_strategies(queries, k=k)
+        print(f"\nCOMPARACAO (k={k}):\n")
+        for strat, m in results.items():
+            recall = m.get("recall_at_k_pct")
+            r_str = f"{recall}%" if recall is not None else "N/A"
+            print(f"  {strat:<12}  inspeccoes={m['inspections']:>2}  "
+                   f"chunks={m['chunks_total']:>3}  queries={m['queries']:>2}  "
+                   f"Recall@{k}={r_str}")
+    except Exception as e:
+        print(f"\nErro: {e}")
+    pause()
 
 
-def cmd_search(args):
-    if not args:
-        print("Uso: search \"<pergunta>\"")
+def action_reindex():
+    """Re-indexar inspeções no vector store."""
+    banner("RE-INDEXAR INSPECCOES")
+    strategy = ask_choice(
+        "Estrategia de chunking:",
+        [("hybrid",    "Hybrid (1 chunk por inspeccao)"),
+         ("per_issue", "Per-issue (1 chunk por problema)")],
+        default_idx=1
+    )
+    print("\nA re-indexar...")
+    try:
+        n = index_all_from_disk(strategy=strategy)
+        print(f"Indexadas {n} inspeccoes com estrategia '{strategy}'.")
+    except Exception as e:
+        print(f"Erro: {e}")
+    pause()
+
+
+def action_report():
+    """Gerar relatório Markdown."""
+    banner("GERAR RELATORIO MARKDOWN")
+    zone    = ask("Zona (opcional, vazio = todas)", "")
+    session = ask("Data sessao YYYY-MM-DD (opcional)", "")
+    try:
+        records = load_session_inspections(
+            session or None, zone or None
+        )
+        if not records:
+            print("\nNenhuma inspeccao encontrada para esses filtros.")
+            pause()
+            return
+        label_parts = []
+        if session:
+            label_parts.append(session)
+        if zone:
+            label_parts.append(zone)
+        label = " / ".join(label_parts) if label_parts else "todas as inspeccoes"
+        report = build_report(records, label)
+        out = Path("data/inspections/report.md")
+        out.write_text(report, encoding="utf-8")
+        print(f"\nRelatorio escrito em {out}")
+        print(f"  {len(records)} inspeccoes incluidas")
+    except Exception as e:
+        print(f"Erro: {e}")
+    pause()
+
+
+def action_compare_zones():
+    """Comparar metricas agregadas entre 2 ou mais zonas."""
+    banner("COMPARAR ZONAS")
+
+    # Listar zonas existentes
+    insp_dir = Path("data/inspections")
+    files = sorted(insp_dir.glob("INS_*.json"))
+    zones_seen = set()
+    import json
+    for f in files:
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+            z = d.get("zone_id")
+            if z:
+                zones_seen.add(z)
+        except Exception:
+            pass
+
+    if len(zones_seen) < 2:
+        print("\nPrecisa de pelo menos 2 zonas inspecionadas para comparar.")
+        pause()
         return
-    query = " ".join(args)
-    for h in search(query, k=5):
-        print(f"  [{h['inspection_id']}] dist={h['distance']:.3f}")
-        print(f"    {h['summary'][:160]}")
 
+    sorted_zones = sorted(zones_seen)
+    print("\nZonas disponiveis:")
+    for i, z in enumerate(sorted_zones, 1):
+        print(f"  {i:2d}. {z}")
 
-def cmd_reindex(_args):
-    n = index_all_from_disk()
-    print(f"{n} inspeccoes (re)indexadas.")
+    raw = input("\nNumeros das zonas a comparar (separados por espaco, ex: 1 3): ").strip()
+    if not raw:
+        print("Cancelado.")
+        pause()
+        return
+    try:
+        chosen = []
+        for s in raw.split():
+            idx = int(s)
+            if 1 <= idx <= len(sorted_zones):
+                chosen.append(sorted_zones[idx - 1])
+        if len(chosen) < 2:
+            print("Precisa de escolher pelo menos 2 zonas.")
+            pause()
+            return
+    except ValueError:
+        print("Input invalido.")
+        pause()
+        return
 
+    days = ask_choice(
+        "Periodo:",
+        [(7, "ultimos 7 dias"),
+         (14, "ultimos 14 dias"),
+         (30, "ultimo mes")],
+        default_idx=1
+    )
 
-def _parse_period(period_str: str) -> tuple:
-    """Converte 'last 7 days' / 'last 14 days' em (start_date, end_date) ISO.
-    Retorna (None, None) se nao foi possivel parsear."""
-    if not period_str:
-        return None, None
-    import re as _re
-    m = _re.match(r"\s*last\s+(\d+)\s+days?\s*$", period_str, _re.IGNORECASE)
-    if not m:
-        return None, None
-    n = int(m.group(1))
     from datetime import timedelta
     end = datetime.now(timezone.utc)
-    start = end - timedelta(days=n)
-    return start.strftime("%Y-%m-%d"), end.strftime("%Y-%m-%d")
+    start = end - timedelta(days=days)
+    period_start = start.strftime("%Y-%m-%d")
+    period_end = end.strftime("%Y-%m-%d")
 
-
-def cmd_report(args):
-    p = argparse.ArgumentParser(prog="report", add_help=False)
-    p.add_argument("--session")
-    p.add_argument("--zone")
-    p.add_argument("--period", help="Ex: \"last 7 days\"")
-    p.add_argument("--output", default="data/inspections/report.md")
-    ns = p.parse_args(args)
-
-    # Filtrar por periodo se especificado
-    period_start, period_end = _parse_period(ns.period) if ns.period else (None, None)
-
-    session_date = ns.session
-    if not session_date and not period_start:
-        session_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-
-    label_parts = []
-    if session_date:
-        label_parts.append(session_date)
-    if ns.period and period_start:
-        label_parts.append(f"{ns.period} ({period_start} a {period_end})")
-    if ns.zone:
-        label_parts.append(f"zona {ns.zone}")
-    label = " / ".join(label_parts) if label_parts else "todas"
-
-    if period_start:
-        # Carregar todas e filtrar pelo intervalo
-        all_records = load_session_inspections(session_date=None, zone=ns.zone)
-        records = [
-            r for r in all_records
-            if period_start <= r.get("timestamp", "")[:10] <= period_end
-        ]
-    else:
-        records = load_session_inspections(session_date=session_date, zone=ns.zone)
-
-    print(f"{len(records)} inspeccoes encontradas para {label}.")
-    out = Path(ns.output)
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(build_report(records, label), encoding="utf-8")
-    print(f"Relatorio: {out}")
-
-
-def cmd_compare(args):
-    """Compara metricas agregadas entre 2 ou mais zonas para um periodo dado.
-    Uso: compare Z_S1 Z_S3 --period "last 7 days" """
-    p = argparse.ArgumentParser(prog="compare", add_help=False)
-    p.add_argument("zones", nargs="+", help="2 ou mais zonas: Z_S1 Z_S3 ...")
-    p.add_argument("--period", default="last 7 days",
-                    help="Ex: \"last 7 days\", \"last 14 days\"")
-    ns = p.parse_args(args)
-
-    if len(ns.zones) < 2:
-        print("Erro: precisa de pelo menos 2 zonas. Ex: compare Z_S1 Z_S3")
-        return
-
-    period_start, period_end = _parse_period(ns.period)
-    if not period_start:
-        print(f"Erro: nao consegui parsear o periodo '{ns.period}'. "
-               "Use formato 'last N days'.")
-        return
-
-    print(f"\nComparacao no periodo {ns.period} ({period_start} a {period_end}):\n")
-
-    all_records = load_session_inspections(session_date=None, zone=None)
-    in_period = [
-        r for r in all_records
-        if period_start <= r.get("timestamp", "")[:10] <= period_end
-    ]
-
+    print(f"\nComparacao no periodo {period_start} a {period_end}:\n")
     print(f"{'Zona':<8} {'Insp.':>6} {'Issues':>7} {'FillR':>7} {'Critical':>10}")
     print("-" * 50)
-    for zone in ns.zones:
+
+    for f in files:
+        pass  # ja temos os files acima
+    # Filtrar inspeccoes no periodo
+    in_period = []
+    for f in files:
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+            ts = d.get("timestamp", "")
+            if ts and period_start <= ts[:10] <= period_end:
+                in_period.append(d)
+        except Exception:
+            pass
+
+    for zone in chosen:
         zone_records = [r for r in in_period if r.get("zone_id") == zone]
         n = len(zone_records)
         if n == 0:
@@ -268,75 +465,94 @@ def cmd_compare(args):
             continue
         total_issues = sum(len(r.get("issues", [])) for r in zone_records)
         avg_fill = sum(r.get("shelf_fill_rate", 0.0) for r in zone_records) / n
-        critical = sum(1 for r in zone_records
-                        if r.get("overall_status") == "critical")
+        critical = sum(1 for r in zone_records if r.get("overall_status") == "critical")
         print(f"{zone:<8} {n:>6} {total_issues:>7} {avg_fill:>7.2f} {critical:>10}")
 
-
-COMMANDS = {
-    "inspect":     cmd_inspect,
-    "inspect-dir": cmd_inspect_dir,
-    "list":        cmd_list_rules,
-    "search":      cmd_search,
-    "reindex":     cmd_reindex,
-    "report":      cmd_report,
-    "history":     cmd_history,
-    "compare":     cmd_compare,
-}
+    pause()
 
 
-def dispatch(line: str):
-    """Despacha uma linha de input para o handler correcto."""
-    try:
-        tokens = shlex.split(line)
-    except ValueError as e:
-        print(f"Erro de parsing: {e}")
-        return
-    if not tokens:
-        return
-
-    head = tokens[0]
-    rest = tokens[1:]
-
-    if head == "add" and rest and rest[0] == "rule":
-        cmd_add_rule(rest[1:])
-    elif head == "list" and rest and rest[0] == "rules":
-        cmd_list_rules(rest[1:])
-    elif head == "delete" and rest and rest[0] == "rule":
-        cmd_delete_rule(rest[1:])
-    elif head == "test" and rest and rest[0] == "rule":
-        cmd_test_rule(rest[1:])
-    elif head in COMMANDS:
-        try:
-            COMMANDS[head](rest)
-        except SystemExit:
-            pass
-        except Exception as e:
-            print(f"Erro a executar comando: {e}")
-    elif head in {"help", "?"}:
-        print(WELCOME)
-    elif head in {"exit", "quit"}:
-        sys.exit(0)
+def action_list_inspections():
+    """Listar inspeções guardadas."""
+    banner("INSPECCOES GUARDADAS")
+    insp_dir = Path("data/inspections")
+    files = sorted(insp_dir.glob("INS_*.json"))
+    if not files:
+        print("\nNenhuma inspeccao guardada.")
     else:
-        print(f"Comando desconhecido: {head}. Escreve 'help'.")
+        import json
+        print(f"\nTotal: {len(files)} inspeccoes\n")
+        for f in files:
+            try:
+                d = json.loads(f.read_text(encoding="utf-8"))
+                print(f"  {d['inspection_id']}")
+                print(f"    zona={d.get('zone_id','?')}  "
+                       f"status={d.get('overall_status','?')}  "
+                       f"issues={len(d.get('issues',[]))}")
+            except Exception:
+                pass
+    pause()
+
+
+# ============================================================
+# Menu principal
+# ============================================================
+
+def show_menu():
+    print()
+    print("=" * 60)
+    print("  Sistema de Inspeccao Visual de Prateleiras")
+    print("  TP2 LIACD - Universidade da Beira Interior")
+    print("=" * 60)
+    print()
+    print("  1. Inspecionar uma imagem")
+    print("  2. Adicionar uma regra")
+    print("  3. Listar regras")
+    print("  4. Apagar uma regra")
+    print("  5. Perguntar ao historico (RAG com LLM)")
+    print("  6. Pesquisa semantica (sem LLM)")
+    print("  7. Comparar estrategias de chunking")
+    print("  8. Re-indexar inspeccoes")
+    print("  9. Listar inspeccoes")
+    print(" 10. Gerar relatorio Markdown")
+    print(" 11. Comparar zonas (last 7/14/30 days)")
+    print()
+    print("  0. Sair")
+    print()
 
 
 def main():
-    """Loop interactivo. Aceita tambem comando unico via argv."""
-    if len(sys.argv) > 1:
-        dispatch(" ".join(sys.argv[1:]))
-        return
+    actions = {
+        "1":  action_inspect,
+        "2":  action_add_rule,
+        "3":  action_list_rules,
+        "4":  action_delete_rule,
+        "5":  action_history,
+        "6":  action_search,
+        "7":  action_compare_chunking,
+        "8":  action_reindex,
+        "9":  action_list_inspections,
+        "10": action_report,
+        "11": action_compare_zones,
+    }
 
-    print(WELCOME)
     while True:
         try:
-            line = input("> ").strip()
-        except (EOFError, KeyboardInterrupt):
-            print()
+            show_menu()
+            choice = input("Escolha: ").strip()
+            if choice in ("0", "q", "exit", "sair"):
+                print("\nAte logo!")
+                break
+            if choice in actions:
+                actions[choice]()
+            else:
+                print(f"\nOpcao invalida: '{choice}'. Escolhe entre 0 e 10.")
+        except KeyboardInterrupt:
+            print("\n\nInterrompido pelo utilizador. Ate logo!")
             break
-        if not line:
-            continue
-        dispatch(line)
+        except Exception as e:
+            print(f"\nErro inesperado: {e}")
+            traceback.print_exc()
+            pause()
 
 
 if __name__ == "__main__":
