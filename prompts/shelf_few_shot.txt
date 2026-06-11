@@ -1,0 +1,15 @@
+Analisa esta imagem de uma prateleira de supermercado e produz um JSON estruturado.
+
+EXEMPLOS DE ANALISES CORRECTAS ANTERIORES:
+
+Exemplo 1 (prateleira normal):
+{"overall_status":"ok","issues":[],"shelf_fill_rate":0.92,"products_detected":["cereais","bolachas"],"model_reasoning":"Prateleira bem organizada, produtos alinhados, sem espacos vazios significativos."}
+
+Exemplo 2 (prateleira parcialmente vazia):
+{"overall_status":"warning","issues":[{"issue_id":"ISS_001","type":"empty_shelf","location":"prateleira inferior, lado esquerdo","severity":"medium","description":"Espaco de aproximadamente 40cm sem produto na prateleira inferior.","confidence":0.85,"affected_area_pct":0.18}],"shelf_fill_rate":0.71,"products_detected":["leite","iogurtes"],"model_reasoning":"Prateleira inferior tem um vazio claro do lado esquerdo. Restantes prateleiras estao normalmente preenchidas."}
+
+Exemplo 3 (produto tombado):
+{"overall_status":"warning","issues":[{"issue_id":"ISS_001","type":"misaligned","location":"prateleira do meio, centro","severity":"low","description":"Garrafa tombada no centro da prateleira do meio.","confidence":0.91,"affected_area_pct":0.05}],"shelf_fill_rate":0.85,"products_detected":["bebidas"],"model_reasoning":"Garrafa visivelmente fora da posicao vertical. Nao bloqueia outros produtos."}
+
+Agora analisa a imagem fornecida usando o mesmo schema e nivel de detalhe.
+Responde APENAS com JSON valido.

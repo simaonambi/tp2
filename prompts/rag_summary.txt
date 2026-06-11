@@ -1,0 +1,17 @@
+Gera um summary semanticamente rico desta inspeccao de prateleira, que sera indexado para recuperacao futura.
+
+INSPECCAO:
+{inspection_json}
+
+REGRAS PARA O SUMMARY:
+- Incluir zona, data, dia da semana, hora aproximada.
+- Para cada issue: tipo, severidade, localizacao especifica, descricao curta.
+- Incluir fill rate e lista de produtos visiveis.
+- Usar vocabulario operacional do retalho (e.g., "rotura de stock", "violacao de planograma").
+- Linguagem natural em portugues europeu.
+- Maximo 100 palavras.
+
+EXEMPLO:
+"Inspeccao da zona Z_S3 em 2025-03-17 (terca-feira, 15h). Estado warning. Fill rate 0.72. Prateleira inferior com produto fora de posicao na seccao central (detergente liquido), embalagem danificada detectada no lado direito. Produtos visiveis: detergentes, papel higienico, papel de cozinha."
+
+Devolve apenas o texto do summary, sem aspas e sem prefixos.

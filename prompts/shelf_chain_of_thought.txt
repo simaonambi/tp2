@@ -16,4 +16,7 @@ Coloca o raciocinio dos passos 1-4 no campo model_reasoning. O JSON final tem es
   "model_reasoning": "passo 1: ... passo 2: ... passo 3: ... passo 4: ..."
 }
 
+Tipos validos: empty_shelf, wrong_product, damaged, misaligned, label_missing, other.
+Severidades validas: low, medium, high.
+
 Responde APENAS com JSON valido.

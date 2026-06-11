@@ -1,0 +1,15 @@
+Avalia se a RESPOSTA e suportada pelos DOCUMENTOS recuperados.
+
+DOCUMENTOS:
+{context}
+
+RESPOSTA:
+{answer}
+
+Para cada afirmacao na RESPOSTA, verifica se e diretamente suportada
+pelos DOCUMENTOS. Devolve um valor entre 0 e 1:
+- 1.0 = todas as afirmacoes suportadas
+- 0.5 = metade das afirmacoes suportadas
+- 0.0 = nenhuma afirmacao suportada
+
+Devolve apenas o numero, sem texto adicional.

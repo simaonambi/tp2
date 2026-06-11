@@ -86,16 +86,24 @@ def build_summary(record: dict) -> str:
     if issues:
         issue_parts = []
         for iss in issues:
-            issue_parts.append(
-                f"{iss.get('type','?')} ({iss.get('severity','?')}) "
-                f"em {iss.get('location','?')}: {iss.get('description','')[:120]}"
-            )
+            t = iss.get("type", "?")
+            sev = iss.get("severity", "?")
+            loc = iss.get("location", "?")
+            desc = iss.get("description", "")
+            # Converter campos potencialmente nao-string em strings seguras
+            t = str(t) if not isinstance(t, str) else t
+            sev = str(sev) if not isinstance(sev, str) else sev
+            loc = str(loc) if not isinstance(loc, str) else loc
+            desc = str(desc) if not isinstance(desc, str) else desc
+            issue_parts.append(f"{t} ({sev}) em {loc}: {desc[:120]}")
         issues_text = " Problemas detectados: " + "; ".join(issue_parts) + "."
     else:
         issues_text = " Sem problemas detectados."
 
     products = record.get("products_detected", [])
-    products_text = f" Produtos visiveis: {', '.join(products)}." if products else ""
+    # Robustecer: ignorar entradas nao-string ou converte-las
+    safe_products = [p if isinstance(p, str) else str(p) for p in products if p]
+    products_text = f" Produtos visiveis: {', '.join(safe_products)}." if safe_products else ""
 
     return (
         f"Inspeccao da zona {zone} em {date_str} ({day_name} as {hour}h). "
@@ -115,7 +123,17 @@ def build_metadata(record: dict) -> dict:
     except Exception:
         weekday, hour, date = -1, -1, ""
 
-    issue_types = list({iss.get("type", "") for iss in record.get("issues", []) if iss.get("type")})
+    # Garantir que so apanhamos types que sao strings nao vazias.
+    # Em casos de falha de schema, o Gemini pode devolver type como dict ou lista;
+    # convertemos tudo para string segura antes do join.
+    issue_types = []
+    for iss in record.get("issues", []):
+        t = iss.get("type", "")
+        if isinstance(t, str) and t:
+            issue_types.append(t)
+        elif t:
+            issue_types.append(str(t))
+    issue_types = list(set(issue_types))
 
     return {
         "inspection_id":  record.get("inspection_id", ""),

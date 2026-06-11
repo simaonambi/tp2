@@ -1,0 +1,21 @@
+Analisa esta imagem de uma prateleira de supermercado e produz um JSON com a seguinte estrutura exacta:
+
+{
+  "overall_status": "ok|warning|critical",
+  "issues": [
+    {
+      "issue_id": "ISS_001",
+      "type": "empty_shelf|wrong_product|damaged|misaligned|label_missing|other",
+      "location": "descricao textual",
+      "severity": "low|medium|high",
+      "description": "descricao do problema",
+      "confidence": 0.0,
+      "affected_area_pct": 0.0
+    }
+  ],
+  "shelf_fill_rate": 0.0,
+  "products_detected": [],
+  "model_reasoning": "raciocinio passo a passo"
+}
+
+Responde APENAS com JSON valido. Sem texto antes ou depois.

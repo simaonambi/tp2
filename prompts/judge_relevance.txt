@@ -1,0 +1,14 @@
+Avalia se a RESPOSTA responde diretamente a QUERY do utilizador.
+
+QUERY:
+{query}
+
+RESPOSTA:
+{answer}
+
+Devolve um valor entre 0 e 1:
+- 1.0 = resposta diretamente relevante e completa
+- 0.5 = resposta parcialmente relevante ou demasiado vaga
+- 0.0 = resposta nao relacionada com a query
+
+Devolve apenas o numero, sem texto adicional.
